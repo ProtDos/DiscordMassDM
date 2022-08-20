@@ -1,5 +1,5 @@
 """"
-This tool was made by CodingLive#4819
+This tool was made by CodingLive#0001
 For educational purpose only.
 I'm not responsible for any damage
 """
@@ -13,7 +13,7 @@ import time
 ascii_banner = pyfiglet.figlet_format("Discord DM Spam")
 print(ascii_banner)
 
-a = input("Do you know how to get the token? (y/n) ")
+a = input("Do you know how to get the user token? (y/n) ")
 if a == "y":
     pass
 elif a == "n":
@@ -38,7 +38,22 @@ spam_ = int(input("Do you want to spam [0] or send only one message [1]"))
 if spam_ == 0:
     num = int(input("How many messages?"))
 
+aaa = False
+
+dir = "ids.json"
+    
 out = input("What do you want to do?\nLogging ips [0] or start sending dm's [1]?")
+if int(out) == 1:
+    out2 = input("Load from collected ID's [0] or from personal file (created by you) [1]? ")
+    if int(out2) == 0:
+        pass
+    else:
+        dir = input("Enter file location: ")
+        if os.path.isfile(dir):
+            pass
+        else:
+            exit("Location not valid")
+        aaa = True
 
 if int(out) == 0:
     def log_id(id):
@@ -92,7 +107,7 @@ elif int(out) == 1:
         @bot.event
         async def on_ready():
             print(' [!] Started sending\n')
-            with open("ids.json", "r") as file:
+            with open(dir, "r") as file:
                 data = json.load(file)
             indx = 0
             for i in data:
@@ -123,7 +138,7 @@ elif int(out) == 1:
         @bot.event
         async def on_ready():
             print(' [!] Started sending\n')
-            with open("ids.json", "r") as file:
+            with open(dir, "r") as file:
                 data = json.load(file)
             indx = 0
             for i in data:
