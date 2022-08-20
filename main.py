@@ -9,6 +9,7 @@ import discord
 import time
 import pyfiglet
 import time
+import os
 
 ascii_banner = pyfiglet.figlet_format("Discord DM Spam")
 print(ascii_banner)
