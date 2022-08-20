@@ -1,7 +1,8 @@
 # DiscordMassDM
-##mMade by @ProtDos @CodingLive#0001
+## Made by @ProtDos @CodingLive#0001
 
-![Screenshot (91)](https://user-images.githubusercontent.com/69071809/184872137-1c7bcdde-954a-412a-a576-aecd7c536f70.png)
+
+![16928FA1-3533-4CA4-9957-185229D335D6](https://user-images.githubusercontent.com/69071809/185744848-f2b00287-3f29-4274-ad5e-9f944138d0d8.jpeg)
 
 ## Installation
 ```bash
