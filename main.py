@@ -8,6 +8,7 @@ import json
 import discord
 import time
 import pyfiglet
+import time
 
 ascii_banner = pyfiglet.figlet_format("Discord DM Spam")
 print(ascii_banner)
@@ -100,8 +101,11 @@ elif int(out) == 1:
                 try:
                     for i in range(num):
                         await member.send(mess)
-                    print(f" [+] Sent message {indx} / {len(data)}")
+                        time.sleep(4)
+                        print(f" [+] Sent message {indx} / {len(data)}")
                 except discord.errors.HTTPException:
+                    print("Timeout")
+                    time.sleep(15)
                     pass
                 except Exception as e:
                     print("Couldn't send message to user: ", member)
@@ -128,7 +132,10 @@ elif int(out) == 1:
                 try:
                     await member.send(mess)
                     print(f" [+] Sent message {indx} / {len(data)}")
+                    time.sleep(4)
                 except discord.errors.HTTPException:
+                    print("Timeout")
+                    time.sleep(15)
                     pass
                 except Exception as e:
                     print("Couldn't send message to user: ", member)
